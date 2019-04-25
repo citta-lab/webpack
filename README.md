@@ -142,6 +142,10 @@ module.exports = {
 
 ### Babel Addition :hocho:
 
+<div align="center">
+  <img src="babel.png" width="546">
+</div>
+
 To transpile all the latest javascript syntax we need to have babel, which includes 3 steps
 - install babel related pakcages
 - update webpack to use babel
