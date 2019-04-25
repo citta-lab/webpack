@@ -1,5 +1,6 @@
 # webpack
 
+You can refer the final complete webpack.config.js file and/or package.json from here.
 
 ### Installation
 
@@ -103,12 +104,15 @@ Lets look into package.json to execute webpack configurations by adding scripts.
 
 This is dependent on `webpack-dev-server` package, we need to server `index.html` page to webpack server while using `webpack-dev-server` and we can do that using an plugin available. i.e `html-webpack-plugin`.
 
+Note: We can also make use of this plugin to generate `index.html` file on fly by webpack instead of providing it from the template.
+
 #### 1.0 Install
 ```javascript
 npm install html-webpack-plugin --save-dev
 ```
-#### 2.0 Update package.json
+#### 2.0 Update webpack config
 ```javascript
+//filename: webpack.config.js
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
@@ -125,8 +129,10 @@ module.exports = {
    plugins : [
      new HtmlWebpackPlugin({
          filename: 'index.html',
-         template: './src/index.html'
+         template: './src/index.html' // mapping filename with starting point from code
      })
    ]
 };
 ```
+
+>> when we use `start` script webpack creates `index.html` and link the `bundle.js` as script and serve it to the server however it will not save it in the disk, so we don't see it. But we can verify that by running `development` or `build` script which will generate new `index.html` inside `dist/src/`.
