@@ -5,7 +5,7 @@ You can refer the final complete [webpack.config.js](https://github.com/citta-la
 >> If the functionality is not defined in ES6 then we cannot use babel to transpile to ES5 format, in these situations we need to use
 polyfill
 
-### Installation
+### Installation :hammer:
 
 We will be installing 3 main npm packages to have `webpack` work smoothly with node based projects.
 #### 1.0 webpack
@@ -44,7 +44,7 @@ so package.json would look like
 }
 ```
 
-### Basic Configuration
+### Basic Configuration :wrench:
 
 It is recommended to use the webpack configuration file to customize the webpack based on our project needs. That being said we can create `webpack.config.js` in root of the project where `package.json` is initialized using `npm init`.
 
