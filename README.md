@@ -2,6 +2,9 @@
 
 You can refer the final complete [webpack.config.js](https://github.com/citta-lab/webpack/blob/master/final_files/webpack.config.js) file and/or [package.json](https://github.com/citta-lab/webpack/blob/master/final_files/package.json) from here.
 
+>> If the functionality is not defined in ES6 then we cannot use babel to transpile to ES5 format, in these situations we need to use
+polyfill
+
 ### Installation
 
 We will be installing 3 main npm packages to have `webpack` work smoothly with node based projects.
@@ -136,3 +139,52 @@ module.exports = {
 ```
 
 >> when we use `start` script webpack creates `index.html` and link the `bundle.js` as script and serve it to the server however it will not save it in the disk, so we don't see it. But we can verify that by running `development` or `build` script which will generate new `index.html` inside `dist/src/`.
+
+### Babel Addition
+
+To transpile all the latest javascript syntax we need to have babel, which includes 3 steps
+- install babel related pakcages
+- update webpack to use babel
+- use .babelrc for babel configurations
+
+#### 1.0 Basic Babel Packages
+```javascript
+npm install @babel/core @babel/preset-env babel-loader --save -dev
+npm install @babel/polyfill --save
+```
+this will add core babel dependencies, babel-loader is used by webpack to load babel.
+
+#### 2.0 Webpack Configurations
+```javascript
+// file: webpack.config.js
+entry: ['@babel/polyfill', './src/js/index.js'],
+module: {
+  rules: [
+      {
+        test:  /\.js$/, // what files to look
+        exclude: /node_modules/, // what folder to exclude
+        use: {
+          loader: 'babel-loader'
+        }
+      }
+   ]
+}
+```
+
+#### 3.0 Babel Config
+```javascript
+// file : .babelrc
+{
+    "presets": [
+        // collection of code transformation plugin, is applied while transforming
+        ["@babel/env", {
+            "targets": {
+                "browsers": [
+                    "last 5 versions",
+                    "ie >= 8"
+                ]
+            }
+        }]
+    ]
+}
+```
