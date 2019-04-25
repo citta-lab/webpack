@@ -1,4 +1,4 @@
-# webpack
+# webpack ![logo](https://github.com/webpack/media/blob/master/logo/icon-square-small.jpg)
 
 You can refer the final complete [webpack.config.js](https://github.com/citta-lab/webpack/blob/master/final_files/webpack.config.js) file and/or [package.json](https://github.com/citta-lab/webpack/blob/master/final_files/package.json) from here.
 
@@ -103,7 +103,7 @@ Lets look into package.json to execute webpack configurations by adding scripts.
 `--mode`: is used to define dev or prod so we can avoid minifying and tree shaking for dev.
 `--open`: will open the file right after executng start script on port `8080` as default.
 
-### Plugin Configuration
+### Plugin Configuration :nut_and_bolt:
 
 This is dependent on `webpack-dev-server` package, we need to server `index.html` page to webpack server while using `webpack-dev-server` and we can do that using an plugin available. i.e `html-webpack-plugin`.
 
@@ -140,7 +140,7 @@ module.exports = {
 
 >> when we use `start` script webpack creates `index.html` and link the `bundle.js` as script and serve it to the server however it will not save it in the disk, so we don't see it. But we can verify that by running `development` or `build` script which will generate new `index.html` inside `dist/src/`.
 
-### Babel Addition
+### Babel Addition :hocho:
 
 To transpile all the latest javascript syntax we need to have babel, which includes 3 steps
 - install babel related pakcages
