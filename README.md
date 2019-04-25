@@ -1,4 +1,6 @@
-# webpack ![logo](./img/webpack.png)
+![](./img/webpack.png)
+
+# webpack
 
 You can refer the final complete [webpack.config.js](https://github.com/citta-lab/webpack/blob/master/final_files/webpack.config.js) file and/or [package.json](https://github.com/citta-lab/webpack/blob/master/final_files/package.json) from here.
 
@@ -140,7 +142,7 @@ module.exports = {
 
 >> when we use `start` script webpack creates `index.html` and link the `bundle.js` as script and serve it to the server however it will not save it in the disk, so we don't see it. But we can verify that by running `development` or `build` script which will generate new `index.html` inside `dist/src/`.
 
-![logo](./img/babel.png)
+![](./img/babel.png)
 
 ### Babel Addition :hocho:
 
