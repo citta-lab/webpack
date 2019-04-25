@@ -1,4 +1,4 @@
-# webpack ![logo](./img/webpack.png| width=100)
+# webpack ![logo](./img/webpack.png)
 
 You can refer the final complete [webpack.config.js](https://github.com/citta-lab/webpack/blob/master/final_files/webpack.config.js) file and/or [package.json](https://github.com/citta-lab/webpack/blob/master/final_files/package.json) from here.
 
