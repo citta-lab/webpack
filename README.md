@@ -1,6 +1,6 @@
 # webpack
 
-You can refer the final complete webpack.config.js file and/or package.json from here.
+You can refer the final complete [webpack.config.js](https://github.com/citta-lab/webpack/blob/master/final_files/webpack.config.js) file and/or [package.json](https://github.com/citta-lab/webpack/blob/master/final_files/package.json) from here.
 
 ### Installation
 
