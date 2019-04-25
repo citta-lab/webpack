@@ -1,4 +1,4 @@
-# webpack ![logo](https://github.com/webpack/media/blob/master/logo/icon-square-small.jpg)
+# webpack ![logo](./img/webpack.png)
 
 You can refer the final complete [webpack.config.js](https://github.com/citta-lab/webpack/blob/master/final_files/webpack.config.js) file and/or [package.json](https://github.com/citta-lab/webpack/blob/master/final_files/package.json) from here.
 
@@ -140,11 +140,9 @@ module.exports = {
 
 >> when we use `start` script webpack creates `index.html` and link the `bundle.js` as script and serve it to the server however it will not save it in the disk, so we don't see it. But we can verify that by running `development` or `build` script which will generate new `index.html` inside `dist/src/`.
 
-### Babel Addition :hocho:
+![logo](./img/babel.png)
 
-<div align="center">
-  <img src="babel.png" width="546">
-</div>
+### Babel Addition :hocho:
 
 To transpile all the latest javascript syntax we need to have babel, which includes 3 steps
 - install babel related pakcages
